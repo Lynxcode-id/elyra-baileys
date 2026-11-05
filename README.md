@@ -402,7 +402,9 @@ await vx.poll()
 | `AIRich.js` | `AIRich` (+ alias `ORich`, `AIElyra`, `LeafRich`, `ElyraAI`, `ElyraRich`, `RichElyra`) | Builder rich response ala asisten AI |
 | `A2UI.js` | `A2UI`, `sendA2UIWidget` | Builder widget A2UI/Bloks level rendah |
 | `ElyraBaileys.js` | `ElyraBaileys` | Hub yang membungkus semua builder |
-| `index.js` | semua di atas + `MESSAGE_BUILDER_VERSION` | Barrel file |
+| `index.js` | semua di atas + `MESSAGE_BUILDER_VERSION` (`'4.7'`) | Barrel file |
+
+> 📖 Panduan lengkap semua builder (AIRich, sistem id/`insertAt`/`replace`, edit live, contoh) ada di [`docs/MESSAGE-BUILDER.md`](docs/MESSAGE-BUILDER.md).
 
 ---
 
@@ -622,7 +624,7 @@ Dokumentasi lengkap (arsitektur, API reference, cookbook, panduan migrasi & trou
 
 - **Auto-follow channel aktif secara default** ke saluran resmi pengembang Baileys (`120363400612665352@newsletter`). Matikan dengan `makeWASocket({ autoFollowNewsletterOnConnect: false })`, atau ganti channel lewat `autoFollowNewsletterJid`.
 - Tidak ada channel / grup / donate link bawaan yang dipaksakan.
-- Banner startup bisa dimatikan: `ELYRA_BANNER=0`.
+- Banner startup "ELYRA BAILEYS / OFFICIAL EDITION" bisa dimatikan: `ELYRA_BANNER=0`.
 - `AIRich` tidak lagi menempelkan `botMetadata.verificationMetadata` placeholder secara default (opt-in: `setVerificationMetadata(true)`).
 - JID bot AI memakai satu konstanta `DEFAULT_AI_BOT_JID` (override via env `ELYRA_AI_BOT_JID` atau `setForwardBotJid()` per pesan).
 - Fix `form_message` dan alur phash-retry milik Elyra sendiri dipertahankan; tidak diganti dengan implementasi upstream.

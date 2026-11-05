@@ -6,6 +6,7 @@ export class ButtonV2 extends BaseBuilder {
     loadFrom(msg: object): this;
     addButton(displayText?: string, buttonId?: string): this;
     addRawButton(obj: any): this;
+    setRawThumbnail(thumbnail: string | Buffer): this;
     setThumbnail(path: any): this;
     setMedia(obj: any): this;
     button(displayText: any, buttonId: any): this;

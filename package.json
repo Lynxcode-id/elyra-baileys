@@ -1,7 +1,7 @@
 {
   "name": "elyra-baileys",
-  "version": "1.2.0",
-  "description": "elyra-baileys: an enhanced, ESM-only WhatsApp Web (multi-device) library for Node.js, refined for erine-ai. Fork of itsliaaa/baileys (synced with 0.4.4), built on @vanzxy/baileys and WhiskeySockets/Baileys.",
+  "version": "1.2.5",
+  "description": "elyra-baileys: an enhanced, ESM-only WhatsApp Web (multi-device) library for Node.js, refined for erine-ai. Fork of itsliaaa/baileys (synced with 0.4.4; MessageBuilder v4.7), built on @vanzxy/baileys and WhiskeySockets/Baileys.",
   "type": "module",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
@@ -43,7 +43,9 @@
     "NOTICE.md",
     "CHANGELOG.md",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "ElyraBanner.d.ts",
+    "docs/MESSAGE-BUILDER.md"
   ],
   "keywords": [
     "elyra",

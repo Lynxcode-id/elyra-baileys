@@ -165,3 +165,8 @@ Synced from **@itsliaaa/baileys** (Lia Wynn, MIT); each ported file/section keep
 - `lib/Defaults/version.js` — default socket version `2.3000.1052983891`.
 - `WAProto/index.js` — `MsgOpaqueData.sharableEventInvite{Status,LocationName,CoverImageHandle,LastUpdatedTsUsec}` (fields 65–68).
 - Package renamed to `elyra-baileys` in v1.2.0; credits and licence notices above are unchanged.
+
+### MessageBuilder v4.7 sync (v1.2.5)
+- **Source:** "NIXCODE — Advanced WhatsApp Interactive Message Builder" v4.7 by **Nixel** (contributors: Ahmad tumbuh kembang); published as `baileys-mbuilder` by FgsiDev/FongsiDev. The original watermark is kept in `lib/Builders/AIRich.js`.
+- **Applied:** offset targets (`[id, offset]`), `assignId(index, id)`, `peek()` shape, `InvalidTargetError`, `ButtonV2.setRawThumbnail()`, `AIRich.tokenizer()`, `AIRich.generateVerificationMetadata()`.
+- The original licence terms apply to that code: personal/commercial use and modification are allowed; re-uploading, reselling, relicensing, or redistributing it as a standalone product is not.

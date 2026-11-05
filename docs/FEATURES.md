@@ -91,6 +91,23 @@
 
 ## 🆕 What's New
 
+### v1.2.5 — MessageBuilder v4.7 & banner baru
+
+**MessageBuilder v4.7 (`AIRich` / `ButtonV2`)**
+- Target dengan offset: `insertAt`, `replace`, dan `delete` kini menerima `id` **atau** `[id, offset]` (offset per blok). Error baru yang jelas: `InvalidTargetError` untuk offset di luar jangkauan.
+- `assignId(index, id)` (gaya 4.7) selain `assignId(id)` lama; `peek(id)` kini juga mengembalikan `section` / `submessage`; getter `sections`.
+- `ButtonV2.setRawThumbnail(base64)` ditambahkan.
+- `AIRich.tokenizer()` dan `AIRich.generateVerificationMetadata()` (static, kompatibel 4.7). `MESSAGE_BUILDER_VERSION` = `'4.7'`.
+- **Fix:** `rich.items` sebelumnya tertimpa method `items()` sehingga menggabungkan beberapa `AIRich` (`.items` → `addSection`) tidak bekerja. Method lama diganti nama menjadi `snapshot()`.
+- **Fix:** `AIRich` kini memakai class error yang sama dengan yang diekspor (`instanceof ItemNotFoundError` / `DuplicateIdError` / `ContentValidationError` sekarang benar). `replace` + `insertAt` bersamaan kini melempar `ContentValidationError`.
+- Watermark & kredit NIXCODE (Nixel) dipertahankan di `lib/Builders/AIRich.js`.
+- Dokumentasi lengkap: [`docs/MESSAGE-BUILDER.md`](MESSAGE-BUILDER.md).
+
+**Banner**
+- Banner startup diganti ke tampilan "ELYRA BAILEYS / OFFICIAL EDITION" (gradasi pink, tanpa border). Matikan dengan `ELYRA_BANNER=0`.
+
+---
+
 ### v1.2.0 — elyra-baileys, sync dengan `@itsliaaa/baileys` 0.4.4
 
 **Rename**

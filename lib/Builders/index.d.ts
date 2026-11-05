@@ -4,7 +4,7 @@ export { Carousel } from "./Carousel.js";
 export { Poll } from "./Poll.js";
 export { Album } from "./Album.js";
 export { Event } from "./Event.js";
-export const MESSAGE_BUILDER_VERSION: any;
+export const MESSAGE_BUILDER_VERSION: "4.7";
 export { ElyraBaileys } from "./ElyraBaileys.js";
 export { Toolkit, BaseBuilder, RowBuilder } from "./shared.js";
 export { Button, CardBuilder } from "./Button.js";

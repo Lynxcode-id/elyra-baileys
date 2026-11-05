@@ -191,13 +191,20 @@ export class AIRich extends BaseBuilder {
     };
     hasId(id: any): boolean;
     getIds(): any[];
-    peek(id: any): {
-        id: any;
+    peek(id: string): {
+        id: string;
         sections: any[];
         submessages: any[];
-    };
-    delete(id: any): this;
+        section: any;
+        submessage: any;
+    } | null;
+    /** `id` or `[id, offset]` (v4.7 target form, block-relative offset). */
+    delete(target: string | [string, number?]): this;
+    /** `assignId(id)` tags the last untracked block; `assignId(index, id)` (v4.7) tags the section at `index`. */
     assignId(id: string): this;
+    assignId(index: number, id: string): this;
+    static tokenizer(code: string, lang?: string): any;
+    static generateVerificationMetadata(): any;
     _addContent(section: any, submessage: any): this;
     addSection(section: any, options?: {}): this;
     addSubmessage(submessage: any, options?: {}): this;
@@ -358,7 +365,9 @@ export class AIRich extends BaseBuilder {
         skipImageFallback?: boolean;
         nativeEdit?: boolean;
     }): Promise<import("../../WAProto/index.js").proto.WebMessageInfo>;
+    get sections(): any[];
     get items(): any[];
+    snapshot(): { sections: any[]; submessages: any[] };
     get lastMessageKey(): any;
     addBloks(data?: {
         type: string;
