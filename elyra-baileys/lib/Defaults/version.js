@@ -1,1 +1,0 @@
-export const DEFAULT_WA_VERSION = [2, 3000, 1052983891];

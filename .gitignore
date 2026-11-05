@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Sisa extract update
+temp_update/
+elyra-baileys/
+*.zip
+
+# Session / auth WhatsApp (jangan sampai ke-push!)
+session/
+sessions/
+auth/
+auth_info*/
+*.creds.json
+
+# Env & secrets
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
